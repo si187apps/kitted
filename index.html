@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kitted — Complete menswear looks for every occasion</title>
-<meta name="description" content="Kitted is a UK menswear styling app: complete looks for weddings, interviews, dates, work events and trips, with plain-English style guides. Built to your budget. iPhone app for UK men, by invitation.">
+<meta name="description" content="Kitted is a UK menswear styling app: complete looks for weddings, interviews, dates, work events and trips, with plain-English style guides. Built to your budget. Launching on iPhone and Android for UK men, by invitation.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://kitted.si187apps.com/">
 <meta property="og:title" content="Kitted — Complete menswear looks for every occasion">
@@ -185,7 +185,7 @@ body { background: var(--bg); }
 <header id="main-content" class="st-hero">
   <div class="st-hero-grid">
     <div>
-      <span class="st-badge reveal"><i></i>Menswear styling · iPhone · UK</span>
+      <span class="st-badge reveal"><i></i>Menswear styling · iOS &amp; Android · UK</span>
       <h1 class="st-h1 reveal reveal-d1">Dressed<br>for <em>it.</em></h1>
       <p class="st-hero-sub reveal reveal-d1">Complete menswear looks for every occasion, built to your budget.</p>
       <p class="st-lede reveal reveal-d2">A wedding, an interview, a first date, a weekend away. Tell Kitted the occasion and where you're going, and it puts together whole outfits, piece by piece, with a plain-English tip on how to wear each one. Set a budget and every look is totalled against it, with a link to each piece.</p>
@@ -304,9 +304,15 @@ body { background: var(--bg); }
           <option value="wedding">Wedding or celebration</option>
           <option value="other">Something else</option>
         </select></div>
+      <div><label for="stylist-device">Your phone</label>
+        <select id="stylist-device">
+          <option value="">Select one...</option>
+          <option value="iphone">iPhone</option>
+          <option value="android">Android</option>
+        </select></div>
       <button class="st-btn" id="stylist-submit" onclick="handleStylistSubmit()">Join the beta</button>
       <p class="st-confirm" id="stylist-confirm">✓ You're on the list. We'll email you when there's a place.</p>
-      <p class="st-small">No spam. See our <a href="/privacy">privacy policy</a>.</p>
+      <p class="st-small">No spam. See our <a href="https://si187apps.com/privacy">privacy policy</a>.</p>
       <p class="st-small">Retailer or affiliate manager? <a href="/partners/">For retailers</a>.</p>
     </div>
   </div>
@@ -354,6 +360,7 @@ async function handleStylistSubmit() {
   const name     = document.getElementById('stylist-name').value.trim();
   const email    = document.getElementById('stylist-email').value.trim();
   const occasion = document.getElementById('stylist-occasion').value;
+  const device   = document.getElementById('stylist-device').value;
   const btn      = document.getElementById('stylist-submit');
   const confirm  = document.getElementById('stylist-confirm');
 
@@ -371,7 +378,7 @@ async function handleStylistSubmit() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
-        name, email, interest: 'outfit-stylist', occasion,
+        name, email, interest: 'outfit-stylist', occasion, device,
         _replyto: email,
         _subject: `New Kitted beta signup — ${name || email}`,
         source: 'kitted.si187apps.com',
