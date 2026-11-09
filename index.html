@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kitted — Complete menswear looks for every occasion | Kitted</title>
+<meta name="description" content="Kitted is a UK menswear styling app: complete looks for weddings, interviews, dates, work events and trips, with plain-English style guides. Built to your budget. iPhone app for UK men, by invitation.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://kitted.si187apps.com/">
+<meta property="og:title" content="Kitted — Complete menswear looks for every occasion">
+<meta property="og:description" content="Dressed for it. Complete menswear looks for every occasion, built to your budget.">
+<meta property="og:url" content="https://kitted.si187apps.com/">
+<meta property="og:image" content="https://kitted.si187apps.com/img/og-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="/img/kitted-icon.png">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter+Tight:wght@400;500;600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/assets/css/cookie-banner.css">
+<style>
+/* Kitted palette: monochrome, ISOLATED to this page. si187 brand mark kept as-is.
+   Reference (observed 3 Nov 2026): Alta (black, white, grotesk, pill buttons), Reiss (white, black, uppercase sans, photo-led). */
+:root {
+  --bg: #0A0A0A; --bg-card: #141414; --bg-raised: #1A1A1A; --bg-border: #262626;
+  --green: #FFFFFF; --green-dim: #BDBDBD;
+  --magenta: #9A9A9A; --magenta-dim: #6B6B6B;
+  --text1: #FFFFFF; --text2: #A3A3A3; --text3: #6B6B6B;
+  --st-gold: #FFFFFF; --st-ivory: #FFFFFF; --st-line: rgba(255,255,255,0.18);
+}
+.st-light { background: #F4F3F0; color: #0A0A0A; --text1: #0A0A0A; --text2: #555; --text3: #8A8A8A; --bg-card: #FFFFFF; --bg-border: #E2E0DB; --st-gold: #0A0A0A; --st-line: rgba(0,0,0,0.15); }
+.nav-cta { color: #0A0A0A !important; }
+body { background: var(--bg); }
+.st-serif { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-weight: 500; letter-spacing: -0.5px; }
+.st-eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 4px; text-transform: uppercase; color: var(--st-gold); display: block; margin-bottom: 18px; }
+.st-wrap { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+.st-section { padding: 120px 0; border-top: 1px solid var(--bg-border); }
+.st-h2 { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-weight: 500; font-size: clamp(34px, 4.6vw, 56px); line-height: 1.02; letter-spacing: -1.8px; color: var(--text1); margin-bottom: 20px; }
+.st-h2 em { font-style: normal; color: var(--text3); }
+.st-lede { font-size: 17px; line-height: 1.75; color: var(--text2); max-width: 560px; }
+
+/* Hero */
+.st-hero { position: relative; overflow: hidden; border-bottom: 1px solid var(--bg-border); }
+.st-hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 55% 70% at 78% 40%, rgba(255,255,255,0.05) 0%, transparent 70%); pointer-events: none; }
+.st-hero-grid { position: relative; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; padding: 120px 24px 110px; max-width: 1180px; margin: 0 auto; }
+.st-badge { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--st-line); border-radius: 100px; padding: 8px 18px; margin-bottom: 36px; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 1px; color: var(--st-gold); }
+.st-badge i { width: 6px; height: 6px; border-radius: 50%; background: var(--st-gold); display: inline-block; }
+.st-h1 { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-weight: 500; font-size: clamp(52px, 7.5vw, 100px); line-height: 0.95; letter-spacing: -3px; color: var(--text1); }
+.st-h1 em { font-style: normal; color: var(--text3); }
+.st-sub { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 4px; text-transform: uppercase; color: var(--text3); margin: 22px 0 28px; }
+.st-hero p.st-lede { margin-bottom: 40px; }
+.st-btn { display: inline-flex; align-items: center; gap: 10px; background: var(--text1); color: var(--bg); font-weight: 600; font-size: 14px; letter-spacing: 0.3px; padding: 15px 28px; border-radius: 100px; text-decoration: none; transition: background .2s; }
+.st-btn:hover { opacity: .85; }
+.st-light .st-btn { color: #F4F3F0; }
+.st-btn-ghost { background: transparent; color: var(--text1); border: 1px solid var(--bg-border); margin-left: 10px; }
+.st-btn-ghost:hover { background: var(--bg-card); }
+
+/* Hero basket mock */
+.st-card { background: var(--bg-card); border: 1px solid var(--bg-border); border-radius: 20px; padding: 28px; box-shadow: 0 40px 80px rgba(0,0,0,0.5); }
+.st-card-head { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--bg-border); padding-bottom: 16px; margin-bottom: 8px; }
+.st-card-title { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-size: 20px; font-weight: 500; letter-spacing: -0.4px; color: var(--text1); }
+.st-card-meta { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text3); }
+.st-line { display: flex; justify-content: space-between; padding: 13px 0; border-bottom: 1px solid var(--bg-border); font-size: 14px; color: var(--text2); }
+.st-line span:last-child { color: var(--text1); font-variant-numeric: tabular-nums; }
+.st-total { display: flex; justify-content: space-between; align-items: baseline; padding-top: 18px; }
+.st-total b { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-size: 34px; font-weight: 500; letter-spacing: -1px; color: var(--text1); }
+.st-under { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--st-gold); }
+.st-bar { height: 3px; background: var(--bg-border); margin: 14px 0 6px; border-radius: 2px; overflow: hidden; }
+.st-bar i { display: block; height: 100%; width: 84%; background: var(--st-gold); }
+.st-note { font-size: 11px; color: var(--text3); margin-top: 16px; }
+
+/* Steps */
+.st-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin-top: 56px; border-top: 1px solid var(--bg-border); }
+.st-step { padding: 32px 28px 0 0; }
+.st-step + .st-step { padding-left: 28px; border-left: 1px solid var(--bg-border); }
+.st-num { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 2px; color: var(--text3); line-height: 1; margin-bottom: 18px; }
+.st-step h3 { font-size: 16px; font-weight: 600; color: var(--text1); margin-bottom: 10px; }
+.st-step p { font-size: 14px; line-height: 1.7; color: var(--text2); }
+
+/* Promises */
+.st-promises { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 48px; }
+.st-promise { border: 1px solid var(--bg-border); padding: 32px; background: var(--bg-card); border-radius: 16px; }
+.st-promise h3 { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-weight: 500; font-size: 22px; letter-spacing: -0.5px; color: var(--text1); margin-bottom: 12px; }
+.st-promise p { font-size: 14px; line-height: 1.7; color: var(--text2); }
+
+/* Join */
+.st-join { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.st-form { display: flex; flex-direction: column; gap: 16px; }
+.st-form label { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); display: block; margin-bottom: 8px; }
+.st-form input, .st-form select { width: 100%; background: var(--bg-card); border: 1px solid var(--bg-border); color: var(--text1); padding: 14px 16px; font: inherit; font-size: 15px; border-radius: 12px; outline: none; }
+.st-form input:focus, .st-form select:focus { border-color: var(--st-gold); }
+.st-form button { border: 0; cursor: pointer; justify-content: center; margin-top: 4px; }
+.st-confirm { display: none; color: var(--st-gold); font-size: 14px; }
+.st-small { font-size: 12px; color: var(--text3); }
+.st-small a { color: var(--text2); }
+
+.st-screens { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+.st-screen { margin: 0; }
+.st-screen img { width: 100%; height: auto; display: block; border-radius: 28px; border: 1px solid var(--bg-border); background: #0A0A0A; }
+.st-screen figcaption { margin-top: 14px; font-size: 14px; line-height: 1.6; color: var(--text2); }
+.st-screen figcaption b { display: block; color: var(--text1); font-weight: 600; }
+@media (max-width: 900px) { .st-screens { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .st-screens { grid-template-columns: 1fr; max-width: 340px; margin-left: auto; margin-right: auto; } }
+@media (max-width: 900px) {
+  .st-hero-grid { grid-template-columns: 1fr; padding: 88px 16px 72px; gap: 48px; }
+  .st-wrap { padding: 0 16px; }
+  .st-section { padding: 80px 0; }
+  .st-grid { grid-template-columns: repeat(4, 1fr); gap: 16px 8px; }
+  .st-steps { grid-template-columns: 1fr 1fr; }
+  .st-step:nth-child(3) { padding-left: 0; border-left: 0; }
+  .st-promises, .st-join { grid-template-columns: 1fr; gap: 32px; }
+  .st-btn-ghost { margin-left: 0; margin-top: 10px; }
+}
+@media (max-width: 520px) {
+  .st-grid { grid-template-columns: 1fr 1fr; gap: 16px 10px; }
+  .st-steps { grid-template-columns: 1fr; }
+  .st-step, .st-step + .st-step { padding: 28px 0 0; border-left: 0; }
+}
+
+/* Kitted brand bar (sits under the fixed studio nav) */
+.kt-bar { padding-top: 66px; background: var(--bg); }
+.kt-bar-in { max-width: 1180px; margin: 0 auto; padding: 18px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-bottom: 1px solid var(--bg-border); }
+.kt-brand { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.kt-word { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-weight: 600; font-size: 22px; letter-spacing: 5px; text-transform: uppercase; color: #FFFFFF; text-decoration: none; line-height: 1; }
+.kt-tag { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #8A8A8A; }
+.kt-links { display: flex; gap: 22px; }
+.kt-links a { font-size: 13px; font-weight: 500; color: #A3A3A3; text-decoration: none; }
+.kt-links a:hover { color: #FFFFFF; }
+.st-hero-grid { padding-top: 80px; }
+.st-hero-sub { font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-weight: 400; font-size: clamp(21px, 2.3vw, 27px); line-height: 1.35; letter-spacing: -0.4px; color: var(--text1); margin: 26px 0 22px; max-width: 520px; }
+
+/* Style guides */
+.st-guides { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; }
+.st-guides h3 { font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); font-weight: 500; margin-bottom: 8px; }
+.st-guides ul { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--bg-border); }
+.st-guides li a { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--bg-border); text-decoration: none; color: var(--text1); font-family: 'Inter Tight', 'Helvetica Neue', sans-serif; font-size: 20px; letter-spacing: -0.3px; }
+.st-guides li a span { font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text2); letter-spacing: 0; text-align: right; }
+.st-guides li a:hover { color: var(--text3); }
+.st-guides-all { margin-top: 40px; }
+@media (max-width: 900px) {
+  .kt-bar { padding-top: 77px; }
+  .kt-bar-in { padding: 14px 16px; }
+  .st-hero-grid { padding-top: 44px; }
+  .st-guides { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 600px) {
+  .kt-tag { display: none; }
+  .kt-bar-in { flex-wrap: nowrap; }
+  .kt-word { font-size: 18px; letter-spacing: 4px; }
+  .kt-links { gap: 14px; }
+  .kt-links a { font-size: 12px; }
+  .st-guides li a span { display: none; }
+}
+</style>
+<link rel="stylesheet" href="/assets/css/kitted.css">
+</head>
+<body>
+
+<!-- Skip link (accessibility) -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- ══ NAV ══ -->
+<nav id="main-nav">
+  <a href="/" class="nav-logo" aria-label="Kitted home"><img src="/img/kitted-icon.png" width="28" height="28" alt="" class="kt-mark"><span class="kt-logo-word">Kitted</span></a>
+  <ul class="nav-links">
+    <li><a href="/guides/">Style guides</a></li>
+    <li><a href="/#app">The app</a></li>
+    <li><a href="/partners/">For retailers</a></li>
+    <li><a href="/#join" class="nav-cta">Join the beta</a></li>
+  </ul>
+  <button class="nav-toggle" aria-label="Open menu" id="nav-toggle-btn"><span></span><span></span><span></span></button>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Close">✕</button>
+  <a href="/" onclick="closeMobileNav()">Home</a>
+  <a href="/guides/" onclick="closeMobileNav()">Style guides</a>
+  <a href="/#app" onclick="closeMobileNav()">The app</a>
+  <a href="/partners/" onclick="closeMobileNav()">For retailers</a>
+  <a href="/#join" onclick="closeMobileNav()">Join the beta</a>
+</div>
+
+
+<!-- ══ HERO ══ -->
+<header id="main-content" class="st-hero">
+  <div class="st-hero-grid">
+    <div>
+      <span class="st-badge reveal"><i></i>Menswear styling · iPhone · UK</span>
+      <h1 class="st-h1 reveal reveal-d1">Dressed<br>for <em>it.</em></h1>
+      <p class="st-hero-sub reveal reveal-d1">Complete menswear looks for every occasion, built to your budget.</p>
+      <p class="st-lede reveal reveal-d2">A wedding, an interview, a first date, a weekend away. Tell Kitted the occasion and where you're going, and it puts together whole outfits, piece by piece, with a plain-English tip on how to wear each one. Set a budget and every look is totalled against it, with a link to each piece.</p>
+      <div class="reveal reveal-d3">
+        <a href="#join" class="st-btn">Join the beta</a>
+        <a href="/guides/" class="st-btn st-btn-ghost">Read the style guides</a>
+      </div>
+    </div>
+    <div class="reveal reveal-d2" aria-label="Example outfit basket (illustrative)">
+      <div class="st-card">
+        <div class="st-card-head">
+          <span class="st-card-title">Corporate evening</span>
+          <span class="st-card-meta">London · 8°C · Rain</span>
+        </div>
+        <div class="st-line"><span>Wool blend overcoat, navy</span><span>£120</span></div>
+        <div class="st-line"><span>Merino roll neck, charcoal</span><span>£38</span></div>
+        <div class="st-line"><span>Wool trousers, grey</span><span>£50</span></div>
+        <div class="st-line"><span>Leather Oxford, black</span><span>£70</span></div>
+        <div class="st-bar"><i></i></div>
+        <div class="st-total"><span class="st-under">£22 under your £300</span><b>£278</b></div>
+        <p class="st-note">Illustrative example. Items and prices are not real products.</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- ══ INSIDE THE APP ══ -->
+<section class="st-section st-light" id="guides">
+  <div class="st-wrap">
+    <span class="st-eyebrow reveal">Kitted style guides</span>
+    <h2 class="st-h2 reveal reveal-d1">What to wear,<br>and <em>why.</em></h2>
+    <p class="st-lede reveal reveal-d2">Plain-English guides to the occasions and dress codes men ask about most: what to wear piece by piece, what to avoid, and two example outfits for each.</p>
+    <div class="st-guides reveal reveal-d2">
+      <div>
+        <h3>By occasion</h3>
+        <ul>
+          <li><a href="/guides/wedding-guest/">Wedding guest<span>Smart, never competing with the groom</span></a></li>
+          <li><a href="/guides/job-interview/">Job interview<span>One step smarter than the team</span></a></li>
+          <li><a href="/guides/date-night/">Date night<span>Effort, without the meeting look</span></a></li>
+          <li><a href="/guides/corporate-event/">Corporate event<span>Serious, not off to court</span></a></li>
+          <li><a href="/guides/smart-evening/">Smart evening<span>Sharper than daytime</span></a></li>
+          <li><a href="/guides/city-break/">City break<span>Walk all day, still look put together</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Dress codes, explained</h3>
+        <ul>
+          <li><a href="/guides/smart-casual/">Smart casual<span>The most common, the most confusing</span></a></li>
+          <li><a href="/guides/business-casual/">Business casual<span>Office-smart, no full suit</span></a></li>
+          <li><a href="/guides/cocktail/">Cocktail<span>A step below black tie</span></a></li>
+          <li><a href="/guides/lounge-suit/">Lounge suit<span>A proper suit and tie</span></a></li>
+          <li><a href="/guides/black-tie/">Black tie<span>Evening formal, done right</span></a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="st-guides-all reveal"><a href="/guides/" class="st-btn">All style guides</a></p>
+  </div>
+</section>
+
+<section class="st-section">
+  <div class="st-wrap">
+    <span class="st-eyebrow reveal">How it works</span>
+    <h2 class="st-h2 reveal reveal-d1">Occasion in.<br>Priced outfit <em>out.</em></h2>
+    <div class="st-steps reveal reveal-d2">
+      <div class="st-step"><div class="st-num">01</div><h3>Tell us the plan</h3><p>The occasion, where and when, the look you're after, the shops you like, and your total budget.</p></div>
+      <div class="st-step"><div class="st-num">02</div><h3>Three complete outfits</h3><p>Picked only from retailer stock, dressed for the occasion and the forecast, each totalled against your budget.</p></div>
+      <div class="st-step"><div class="st-num">03</div><h3>Make it yours</h3><p>Swap any piece, or ask for a cheaper version of the whole look. The total updates as you go.</p></div>
+      <div class="st-step"><div class="st-num">04</div><h3>Buy direct</h3><p>Each piece links to the retailer's own product page. You buy from them, at their price.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="st-section st-light" id="app">
+  <div class="st-wrap">
+    <span class="st-eyebrow reveal">Inside the app</span>
+    <h2 class="st-h2 reveal reveal-d1">Every part of the trip.<br>One <em>list.</em></h2>
+    <p class="st-lede reveal reveal-d2">Tell Kitted where you're going and it splits the trip into the moments that need different clothes. Pick a look for each, then see every piece once, with the total.</p>
+    <div class="st-screens reveal reveal-d2">
+      <figure class="st-screen"><img src="/img/app-trip-parts.webp" alt="App screen: looks for each part of a trip, with tabs for daytime, evening lounge and hospitality suite, and a look priced against a £250 budget" width="780" height="1328" loading="lazy"><figcaption><b>Looks for each part of the trip</b>Three complete outfits per moment, each priced against your budget.</figcaption></figure>
+      <figure class="st-screen"><img src="/img/app-outfit.webp" alt="App screen: an outfit with each piece, swap buttons, a note about delivery from several shops, and Cheaper version and Share look buttons" width="780" height="1328" loading="lazy"><figcaption><b>Make it yours</b>Swap any piece, ask for a cheaper version, or share the look.</figcaption></figure>
+      <figure class="st-screen"><img src="/img/app-packing.webp" alt="App screen: packing list grouping every piece across the picked looks, with the total to buy everything once" width="780" height="1328" loading="lazy"><figcaption><b>Your packing list</b>Every piece across your looks, listed once, ready to tick off.</figcaption></figure>
+    </div>
+    <p class="st-disclaim">Screens from the beta app using our test catalogue: items, prices and retailers are made up, and the place details are an example. Real retailer stock and shop links arrive as retailers connect.</p>
+  </div>
+</section>
+
+<section class="st-section">
+  <div class="st-wrap">
+    <span class="st-eyebrow reveal">The fine print, up front</span>
+    <h2 class="st-h2 reveal reveal-d1">Straight with <em>you.</em></h2>
+    <div class="st-promises reveal reveal-d2">
+      <div class="st-promise"><h3>We earn commission</h3><p>When you buy through our links, the retailer pays us a commission. Your price doesn't change, and we say so before any shop link.</p></div>
+      <div class="st-promise"><h3>Your answers, handled with care</h3><p>No account and no photos. Your answers are sent to Google Gemini, an AI service, to build your outfits; we don't store them. <a href="/privacy/">Privacy notice</a>.</p></div>
+      <div class="st-promise"><h3>Starting small</h3><p>Menswear, UK only, 18 and over. We're opening Kitted by invitation, so every outfit is right before we open the doors.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="st-section st-light" id="join">
+  <div class="st-wrap st-join">
+    <div>
+      <span class="st-eyebrow">Early access</span>
+      <h2 class="st-h2">Got somewhere<br>to <em>be?</em></h2>
+      <p class="st-lede">We're opening Kitted to a small group of UK men first. Leave your email and we'll be in touch when there's a place.</p>
+    </div>
+    <div class="st-form" id="stylist-form">
+      <div><label for="stylist-name">Name</label><input type="text" id="stylist-name" placeholder="Your name" autocomplete="name"></div>
+      <div><label for="stylist-email">Email</label><input type="email" id="stylist-email" placeholder="your@email.com" autocomplete="email"></div>
+      <div><label for="stylist-occasion">What would you use it for first?</label>
+        <select id="stylist-occasion">
+          <option value="">Select one...</option>
+          <option value="corporate">Corporate or work event</option>
+          <option value="evening">Smart evening out</option>
+          <option value="city-break">City break or holiday</option>
+          <option value="wedding">Wedding or celebration</option>
+          <option value="other">Something else</option>
+        </select></div>
+      <button class="st-btn" id="stylist-submit" onclick="handleStylistSubmit()">Join the beta</button>
+      <p class="st-confirm" id="stylist-confirm">✓ You're on the list. We'll email you when there's a place.</p>
+      <p class="st-small">No spam. See our <a href="/privacy">privacy policy</a>.</p>
+      <p class="st-small">Retailer or affiliate manager? <a href="/partners/">For retailers</a>.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-col">
+    <div class="footer-brand"><img src="/img/kitted-icon.png" width="28" height="28" alt="" class="kt-mark"><div><p class="footer-name kt-logo-word">Kitted</p><p class="footer-tagline">Menswear styling · UK</p></div></div>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Style guides</p>
+    <ul class="footer-nav-links">
+      <li><a href="/guides/wedding-guest/">Wedding guest</a></li>
+      <li><a href="/guides/job-interview/">Job interview</a></li>
+      <li><a href="/guides/date-night/">Date night</a></li>
+      <li><a href="/guides/">All guides</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Kitted</p>
+    <ul class="footer-nav-links">
+      <li><a href="/#app">The app</a></li>
+      <li><a href="/#join">Join the beta</a></li>
+      <li><a href="/partners/">For retailers</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <p class="footer-nav-label">Contact</p>
+    <ul class="footer-nav-links"><li><a href="mailto:studio@si187apps.com">studio@si187apps.com</a></li></ul>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">© 2026 SI187 Enterprises Ltd (company 15126475). Kitted is made by si187 Apps.</p>
+    <div class="footer-legal"><a href="/privacy/">App privacy</a><a href="https://si187apps.com/privacy">Website privacy</a><a href="https://si187apps.com/terms">Terms</a><a href="#" onclick="window.si187CookiePrefs && window.si187CookiePrefs(); return false;" style="cursor:pointer;">Cookie preferences</a></div>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+<script>
+// Beta waitlist.
+const FORMSPREE_STYLIST_ID = 'xwvynpjr';
+
+async function handleStylistSubmit() {
+  const name     = document.getElementById('stylist-name').value.trim();
+  const email    = document.getElementById('stylist-email').value.trim();
+  const occasion = document.getElementById('stylist-occasion').value;
+  const btn      = document.getElementById('stylist-submit');
+  const confirm  = document.getElementById('stylist-confirm');
+
+  if (!email || !email.includes('@') || !email.includes('.')) {
+    document.getElementById('stylist-email').style.borderColor = 'var(--magenta)';
+    document.getElementById('stylist-email').focus();
+    return;
+  }
+
+  btn.textContent = 'Joining...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_STYLIST_ID}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        name, email, interest: 'outfit-stylist', occasion,
+        _replyto: email,
+        _subject: `New Kitted beta signup — ${name || email}`,
+        source: 'kitted.si187apps.com',
+        submitted_at: new Date().toISOString()
+      })
+    });
+    if (res.ok) {
+      btn.style.display = 'none';
+      confirm.style.display = 'block';
+      document.querySelectorAll('#stylist-form input, #stylist-form select').forEach(r => r.disabled = true);
+    } else {
+      btn.textContent = 'Try again';
+      btn.disabled = false;
+    }
+  } catch (err) {
+    btn.textContent = 'Try again';
+    btn.disabled = false;
+  }
+}
+</script>
+
+<!-- Cookie consent + GA4 (consent-gated) -->
+<script src="/assets/js/cookie-banner.js"></script>
+</body>
+</html>
