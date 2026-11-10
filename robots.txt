@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kitted.si187apps.com/sitemap.xml
+Sitemap: https://togged.si187apps.com/sitemap.xml
