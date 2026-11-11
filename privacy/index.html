@@ -71,7 +71,7 @@
 <main class="legal-content" id="main-content">
   <span class="legal-eyebrow">Togged · Privacy</span>
   <h1>App privacy <em>notice.</em></h1>
-  <p class="legal-meta">Last updated: 5 November 2026 · Applies to the Togged app (closed beta)</p>
+  <p class="legal-meta">Last updated: 11 November 2026 · Applies to the Togged app</p>
 
   <p>This notice covers the Togged app (previously called Outfit Stylist) for iPhone and Android. Our <a href="/privacy">main privacy policy</a> covers our website.</p>
 
@@ -79,34 +79,44 @@
   <p><strong>si187 Enterprises Ltd</strong> (company number 15126475, registered in England and Wales), trading as <strong>si187 Apps</strong>, is the data controller for the app. Contact: <a href="mailto:studio@si187apps.com">studio@si187apps.com</a>.</p>
 
   <h2 id="what-we-collect">2. What the app uses</h2>
-  <p>There is no account, no sign-in and no photo upload. To build outfits, the app uses only what you enter:</p>
+  <p>There is no account and no sign-in. To build outfits, the app uses only what you enter:</p>
   <ul>
     <li>the occasion and your budget;</li>
     <li>optionally: a town or city, trip dates, expected weather, style notes and preferred shops.</li>
     <li>optionally, from the first-run questions: your fit and colour preferences, how much styling guidance you want, and an age range (for example 35–44). We never ask for your exact age or date of birth.</li>
   </ul>
   <p>Your age range is used only to suggest fits and brands that suit you. It is kept on your phone for the session and sent with your answers when you style; we don't store it.</p>
-  <p>Please don't enter personal details (such as your name or address) in the free-text fields. The app does not use your device location, contacts or photos, and it contains no advertising or analytics trackers.</p>
+  <p>Please don't enter personal details (such as your name or address) in the free-text fields. The app does not use your device location or contacts, and it contains no advertising or analytics trackers. It uses a photo of you only if you choose the optional AI preview (section 3a).</p>
 
   <h2 id="how">3. How your answers are used</h2>
   <p>When you tap <em>Style me</em>, your answers are sent to our server, which runs on <strong>Cloudflare</strong>, and from there to <strong>Google Gemini</strong>, an AI service that picks outfits from our product catalogue. Our server checks every outfit and works out all prices itself.</p>
   <p>The app asks for your agreement, and that you are 18 or over, before your answers are first sent to Google Gemini. You can withdraw it at any time with the <em>Use AI stylist</em> switch in Settings. Our lawful basis is your request for the service (to provide outfits you ask for) and our legitimate interest in running and protecting it.</p>
 
+  <h2 id="photo-preview">3a. AI preview with your photo ("See it on you")</h2>
+  <p>This is optional. If you choose it, you add one full-length photo of yourself, taken with your camera or picked from your photos (the app sees only the photo you pick, not your library). Before anything is sent, the app asks you to confirm that you are 18 or over, that the photo is of you, and that you agree to it being sent.</p>
+  <p>The photo is made smaller on your phone, then sent to our server and from there to <strong>Google Gemini</strong>, which makes a picture of you wearing the look. The app keeps the photo in its memory only while the preview screen is open, so you can make more previews from it; it is not saved on your phone, and it is gone when you leave the screen. Our server does not store your photo or the picture, and does not log them. The picture is AI-generated, is labelled as such, and is a guide to the look rather than an exact fit, size or colour.</p>
+  <p>Our lawful basis is your consent. You can simply not use the feature; because nothing is kept, there is nothing to withdraw afterwards. Only use a photo of yourself.</p>
+
+  <h2 id="purchases">3b. Occasion pack (in-app purchase)</h2>
+  <p>You can buy an Occasion pack of AI previews. <strong>Apple</strong> takes the payment; we never see your card details or Apple ID. <strong>RevenueCat</strong> records the purchase for us under a random ID created by the app (no name or email), and our server asks RevenueCat to confirm the purchase before making a paid preview. Our server keeps only that purchase's ID and the number of previews used, so the pack works if you close the app. Our lawful basis is providing what you bought. Refunds are handled by Apple.</p>
+
   <h2 id="sharing">4. Who receives data</h2>
   <ul>
     <li><strong>Google (Gemini API)</strong> receives your answers to generate outfits. We use Google's paid service and ask it not to store requests (the API's <code>store: false</code> setting). Google's terms may still allow it to keep requests briefly to detect abuse. You can turn the AI stylist off in the app's Settings; outfits are then worked out on your phone and nothing is sent.</li>
+    <li><strong>Google (Gemini API), AI preview</strong>: if you use the AI preview, your photo and the look's pieces go to Google to make the picture, on the same paid, no-storage terms as above.</li>
+    <li><strong>RevenueCat</strong> (United States) records Occasion pack purchases under a random ID, with no name or email. Its <a href="https://www.revenuecat.com/privacy">privacy policy</a> applies.</li>
     <li><strong>Google (Maps Places API)</strong>: unless you have turned the AI stylist off, what you type in the Where field is sent through our server to Google Maps to suggest places. We don't store it. Google's <a href="https://policies.google.com/privacy">privacy policy</a> applies.</li>
     <li><strong>Cloudflare</strong> runs our server. Your answers pass through it but are not stored. Operational logs record only timings and error codes, never your answers.</li>
     <li><strong>Retailers and affiliate networks</strong> (such as Awin): when you tap a shop link, it opens in your phone's browser and the retailer or network may set a tracking cookie so we can be paid commission. Their own privacy policies apply. We do not send them your answers.</li>
-    <li><strong>Apple and Google</strong> distribute the app (App Store, TestFlight, Google Play). Their privacy terms apply.</li>
+    <li><strong>Apple and Google</strong> distribute the app (App Store, TestFlight, Google Play) and take payment for in-app purchases. Their privacy terms apply.</li>
   </ul>
   <p>We don't sell your data or share it with advertisers.</p>
 
   <h2 id="retention">5. How long we keep data</h2>
-  <p>We don't keep your answers. During the beta, the app does not save your outfits on your phone either; they are gone when you close the app. Google's retention is described in section 4.</p>
+  <p>We don't keep your answers, your photo or your AI previews. The app does not save your outfits on your phone either; they are gone when you close the app. For an Occasion pack we keep only the purchase ID and the number of previews used (section 3b). Google's retention is described in section 4.</p>
 
   <h2 id="ai">6. AI-generated content</h2>
-  <p>Outfit names and reasons may be written by AI. Images shown as examples on our website and in the app's welcome screen are AI-generated and are not products or prices from the app. During the beta the app may show a clearly marked test catalogue with made-up items.</p>
+  <p>Outfit names and reasons may be written by AI. Images shown as examples on our website and in the app's welcome screen are AI-generated and are not products or prices from the app. AI previews of you are made by Google Gemini from your photo and are labelled "AI-generated preview". Until retailers are connected, the app may show a clearly marked test catalogue with made-up items.</p>
 
   <h2 id="age">7. Age</h2>
   <p>The app is intended for adults aged 18 and over.</p>
@@ -115,10 +125,10 @@
   <p>Under UK GDPR you can ask to access, correct or delete your personal data, object to or restrict its use, and complain to the Information Commissioner's Office (<a href="https://ico.org.uk" rel="noopener">ico.org.uk</a>). Because we don't store your answers, there is usually nothing for us to retrieve or delete. Email <a href="mailto:studio@si187apps.com">studio@si187apps.com</a> with any request.</p>
 
   <h2 id="international">9. International transfers</h2>
-  <p>Google and Cloudflare may process data outside the UK, under their standard data protection terms for international transfers.</p>
+  <p>Google, Cloudflare and RevenueCat may process data outside the UK, under their standard data protection terms for international transfers.</p>
 
   <h2 id="changes">10. Changes</h2>
-  <p>If the app starts using new data (for example, saved outfits, purchases or an optional photo try-on), we will update this notice before that feature goes live and ask for consent where needed.</p>
+  <p>If the app starts using new data (for example, saved outfits or an account), we will update this notice before that feature goes live and ask for consent where needed.</p>
 </main>
 
 <!-- ══ FOOTER ══ -->
