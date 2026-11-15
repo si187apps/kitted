@@ -152,6 +152,23 @@ body { background: var(--bg); }
   .kt-links a { font-size: 12px; }
   .st-guides li a span { display: none; }
 }
+
+/* Launch video, front and centre at the top of the hero */
+.kt-video { position: relative; max-width: 1000px; margin: 0 auto; padding: 56px 24px 0; }
+.kt-video-frame { position: relative; border-radius: 20px; overflow: hidden; border: 1px solid var(--bg-border); background: #0A0A0A; box-shadow: 0 40px 80px rgba(0,0,0,0.5); }
+.kt-video video { display: block; width: 100%; height: auto; background: #0A0A0A; }
+.kt-video .kt-v-tall { display: none; }
+.kt-play { position: absolute; inset: 0; margin: auto; width: 84px; height: 84px; border-radius: 50%; border: 0; background: #FFFFFF; color: #0A0A0A; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); transition: transform .2s; }
+.kt-play:hover { transform: scale(1.06); }
+.kt-play svg { width: 30px; height: 30px; margin-left: 5px; }
+.kt-video-frame.playing .kt-play { display: none; }
+.kt-video-cap { margin-top: 14px; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text3); }
+@media (max-width: 700px) {
+  .kt-video { padding: 32px 16px 0; max-width: 380px; }
+  .kt-video .kt-v-wide { display: none; }
+  .kt-video .kt-v-tall { display: block; max-height: 78vh; width: auto; margin: 0 auto; }
+  .kt-play { display: none; }
+}
 </style>
 <link rel="stylesheet" href="/assets/css/togged.css">
 </head>
@@ -183,6 +200,18 @@ body { background: var(--bg); }
 
 <!-- ══ HERO ══ -->
 <header id="main-content" class="st-hero">
+  <div class="kt-video reveal">
+    <div class="kt-video-frame">
+      <video class="kt-v-wide" controls playsinline preload="none" poster="/video/togged-launch-16x9.jpg" aria-label="Togged in 30 seconds">
+        <source src="/video/togged-launch-16x9.mp4" type="video/mp4">
+      </video>
+      <video class="kt-v-tall" controls playsinline preload="none" poster="/video/togged-launch-vertical.jpg" aria-label="Togged in 30 seconds">
+        <source src="/video/togged-launch-vertical.mp4" type="video/mp4">
+      </video>
+      <button class="kt-play" type="button" aria-label="Play the Togged video"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4l15 8-15 8z"/></svg></button>
+    </div>
+    <p class="kt-video-cap">Togged in 30 seconds · sound on</p>
+  </div>
   <div class="st-hero-grid">
     <div>
       <span class="st-badge reveal"><i></i>Menswear styling · iOS &amp; Android · UK</span>
@@ -342,5 +371,16 @@ body { background: var(--bg); }
 
 <!-- Cookie consent + GA4 (consent-gated) -->
 <script src="/assets/js/cookie-banner.js"></script>
+<script>
+(function(){
+  var f=document.querySelector('.kt-video-frame'); if(!f) return;
+  function vis(){ var vs=f.querySelectorAll('video'); for(var i=0;i<vs.length;i++){ if(vs[i].offsetParent!==null) return vs[i]; } return vs[0]; }
+  f.querySelector('.kt-play').addEventListener('click',function(){ var v=vis(); v.play(); });
+  f.querySelectorAll('video').forEach(function(v){
+    v.addEventListener('play',function(){ f.classList.add('playing'); });
+    v.addEventListener('ended',function(){ f.classList.remove('playing'); });
+  });
+})();
+</script>
 </body>
 </html>
