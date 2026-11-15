@@ -6,3 +6,31 @@
 /* Clear the fixed header, and keep the note below the app screens apart from their captions. */
 .st-hero { padding-top: 56px; }
 .st-screens { margin-bottom: 44px; }
+
+/* Download bar (assets/js/store-bar.js), on every page */
+.kt-storebar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 450; display: flex; align-items: center; gap: 14px; max-width: 760px; margin: 0 auto 0; padding: 12px 14px 12px 16px; background: #141414; border: 1px solid #2E2E2E; border-bottom: 0; border-radius: 18px 18px 0 0; box-shadow: 0 -10px 40px rgba(0,0,0,0.55); transform: translateY(120%); transition: transform .45s cubic-bezier(.2,.8,.2,1), bottom .25s; font-family: 'Inter', sans-serif; }
+.kt-storebar.show { transform: translateY(0); }
+.kt-sb-icon { width: 40px; height: 40px; border-radius: 10px; flex: none; }
+.kt-sb-text { display: flex; flex-direction: column; min-width: 0; flex: 1; }
+.kt-sb-text b { color: #fff; font-size: 14px; font-weight: 600; white-space: nowrap; }
+.kt-sb-text span { color: #A3A3A3; font-size: 12px; }
+.kt-sb-btns { display: flex; gap: 8px; flex: none; }
+.kt-sb-btn { display: inline-flex; align-items: center; gap: 7px; background: #fff; color: #0A0A0A; text-decoration: none; font-weight: 600; font-size: 13px; padding: 10px 14px; border-radius: 100px; white-space: nowrap; }
+.kt-sb-btn:hover { opacity: .88; }
+.kt-sb-btn svg { width: 16px; height: 16px; }
+.kt-sb-close { flex: none; background: none; border: 0; color: #8A8A8A; font-size: 22px; line-height: 1; padding: 4px 6px; cursor: pointer; }
+.kt-sb-close:hover { color: #fff; }
+body.has-storebar { padding-bottom: 76px; }
+@media (max-width: 560px) {
+  .kt-storebar { flex-wrap: wrap; gap: 10px 12px; padding: 12px 12px calc(12px + env(safe-area-inset-bottom)); border-radius: 16px 16px 0 0; }
+  .kt-sb-text { flex: 1; }
+  .kt-sb-btns { order: 3; width: 100%; }
+  .kt-sb-btn { flex: 1; justify-content: center; padding: 11px 10px; }
+  body.has-storebar { padding-bottom: 124px; }
+}
+
+/* Store buttons at the very top of the home page */
+.kt-top-stores { display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; padding: 28px 16px 0; }
+.kt-top-stores .kt-sb-btn { font-size: 15px; padding: 14px 24px; }
+.kt-top-stores .kt-sb-btn svg { width: 19px; height: 19px; }
+.kt-top-stores small { width: 100%; text-align: center; font-family: 'JetBrains Mono', monospace; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: #8A8A8A; }
